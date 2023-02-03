@@ -17,7 +17,7 @@ instructor: ["Amanda Miotto","William Pinzon Perez","David Green"] # boxed, comm
 helper: ["Danny Meloncelli","Cara Conradsen","Pauline Lawrey"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["training@qcif.edu.au"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
-eventbrite: "264970793777"         # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+humanitix: ""         # optional: alphanumeric key for Humanitix registration, e.g., "introduction-to-programming-plotting-and-programming-in-python-200323"
 ---
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
@@ -63,23 +63,18 @@ It looks like you are setting up a website for a Software Carpentry curriculum b
 {% endif %}
 
 {% comment %}
-EVENTBRITE
+HUMANTIX
 
-This block includes the Eventbrite registration widget if
-'eventbrite' has been set in the header.  You can delete it if you
-are not using Eventbrite, or leave it in, since it will not be
-displayed if the 'eventbrite' field in the header is not set.
+This block includes the Humanitix registration widget if
+'humanitix' has been set in the header.  
 {% endcomment %}
-{% if page.eventbrite %}
+{% if page.humanitix %}
 <strong>Some adblockers block the registration window. If you do not see the
   registration box below, please check your adblocker settings.</strong>
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="280px"
-  scrolling="auto">
-</iframe>
+
+<iframe id="iframe-container" src="https://events.humanitix.com/{{page.humanitix}}/tickets" width="90%" height="600px" scrolling="auto" frameborder="0"></iframe>  
+
+
 {% endif %}
 
 
